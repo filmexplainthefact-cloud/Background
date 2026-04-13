@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: synex-admin
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s build -l 3000
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
